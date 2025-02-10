@@ -26,7 +26,7 @@ function App() {
 
   useEffect(() => {
     const connectWebSocket = () => {
-      const websocket = new WebSocket('wss://tender-instantly-feline.ngrok-free.app/ws');
+      const websocket = new WebSocket('ws://tender-instantly-feline.ngrok-free.app/ws');
       
       websocket.onopen = () => {
         setIsConnected(true);
