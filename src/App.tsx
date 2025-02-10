@@ -26,7 +26,7 @@ function App() {
 
   useEffect(() => {
     const connectWebSocket = () => {
-      const websocket = new WebSocket('ws://52.140.130.229:8089/ws');
+      const websocket = new WebSocket('wss://badminton-server-app.azurewebsites.net/ws');  //wss://badminton-server-app.azurewebsites.net/ws   ws://52.140.130.229:8089/ws
       
       websocket.onopen = () => {
         setIsConnected(true);
@@ -102,7 +102,7 @@ function App() {
                 <input
                   id="roomKey"
                   type="text"
-                  className="w-full px-4 py-2 rounded-lg bg-white/20 backdrop-blur border border-white/30 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full px-4 py-2 rounded-lg bg-white/20 backdrop-blur border border-white/30 focus:outline-none focus:ring-2 focus:ring-purple-500  text-red-500"
                   placeholder="Enter room key"
                   value={roomKey}
                   onChange={(e) => setRoomKey(e.target.value)}
